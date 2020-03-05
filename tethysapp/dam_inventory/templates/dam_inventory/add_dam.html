@@ -17,14 +17,54 @@ crossorigin=""/>
   
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
 integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-   crossorigin=""></script>    
+   crossorigin=""></script>   
   
+ <style>
+   
+        #mapid { height: 500px; }
+
+        h1 {
+            font-family: cursive;
+            color: white;
+            font-weight: bolder;
+            text-align: center;
+            background-color: blue;
+        }
+        h2 {
+            font-family: cursive;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            background-color: blue;
+        }
+        h3 {
+            font-family: cursive;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            background-color: blue;
+        }
+        body{
+            background-color: #000000;
+        }
+    </style>
+  
+</head>
+ 
+  <h1>
+ <p class="sansserif">
+   Daniel Arana </br>
+Build an Interactive Page with Leaflet Open Source Mapping API </br>
+CE 514 </br>
+2/20/2020 </br></p></h1>
+
+
+   <div id="mapid"></div>  
 
 
 </head>
  
  
- <body>
  <p class="sansserif">
    Daniel Arana </br>
 Build an Interactive Page with Leaflet Open Source Mapping API </br>
@@ -34,8 +74,6 @@ CE 514 </br>
    <div id="mapid"></div>
 
 
-
-</body>
 
 <script>
  var mymap = L.map('mapid').setView([29.049176, -80.933488], 10.5);
@@ -79,6 +117,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiZGFyYW5hOTMiLCJhIjoiY2s2dXdyeGd6MGVudjNmbzhuOTJoNG11bSJ9.Z1GEpOQoOMCbi4YP2r5Abg'
 }).addTo(mymap);
   </script>
+<body></body>
 {% endblock %}
 
 
