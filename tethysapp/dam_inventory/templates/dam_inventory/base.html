@@ -15,13 +15,11 @@
 {% block app_navigation_items %}
 
 {% url 'dam_inventory:home' as home_url %}
-{% url 'dam_inventory:add_dam' as add_dam_url %}
+{% url 'dam_inventory:add_dam' as map_url %}
 
 
 <li class="{% if request.path == home_url %}active{% endif %}"><a href="{{ home_url }}">Home Page</a></li>
-<li class="{% if request.path == add_dam_url %}active{% endif %}"><a href="{{ add_dam_url }}">Map</a></li>
-
-<button id ='button' disabled onclick="app.distanceFinder()">Find Map</button>
+<li class="{% if request.path == map_url %}active{% endif %}"><a href="{{ add_dam_url }}">Map</a></li>
 
 <div id="PHA"> Try using the map (PHA).</div>
 
@@ -35,10 +33,10 @@
 
 {% block content_dependent_styles %}
   {{ block.super }}
-  <link href="{% static 'dam_inventory/css/main.css' %}" rel="stylesheet"/>
+  <link href="{% static 'dam_inventory/public/css/main.css' %}" rel="stylesheet"/>
 {% endblock %}
 
 {% block scripts %}
   {{ block.super }}
-  <script src="{% static 'dam_inventory/js/main.js' %}" type="text/javascript"></script>
+  <script src="{% static 'dam_inventory/public/js/main.js' %}" type="text/javascript"></script>
 {% endblock %}
