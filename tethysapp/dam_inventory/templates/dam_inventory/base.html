@@ -15,11 +15,11 @@
 {% block app_navigation_items %}
 
 {% url 'quaker_motus:home' as home_url %}
-{% url 'quaker_motus:map' as map_url %}
+{% url 'quaker_motus:map' as add_dam_url %}
 
 
 <li class="{% if request.path == home_url %}active{% endif %}"><a href="{{ home_url }}">Home Page</a></li>
-<li class="{% if request.path == map_url %}active{% endif %}"><a href="{{ add_dam }}">Map</a></li>
+<li class="{% if request.path == add_dam_url %}active{% endif %}"><a href="{{ add_dam_url }}">Map</a></li>
 
 <button id ='button' disabled onclick="app.distanceFinder()">Find Map</button>
 
