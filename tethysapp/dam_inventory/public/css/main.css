@@ -1,0 +1,19 @@
+ 
+   #mapid { height: 500px;
+width: 100%;
+  padding: 5px;
+  margin: 5px;
+  align="center";
+  border: 2px solid black;
+}
+
+body{
+  text-align: center;
+     background-color: beige;
+		background-size: 100%;
+	color: black
+    }
+
+p.sansserif {
+  font-family: Comic Sans MS, cursive, sans-serif;
+}
