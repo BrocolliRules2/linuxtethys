@@ -15,7 +15,7 @@
 {% block app_navigation_items %}
 
 {% url 'dam_inventory:home' as home_url %}
-{% url 'dam_inventory:map' as add_dam_url %}
+{% url 'dam_inventory:add_dam' as add_dam_url %}
 
 
 <li class="{% if request.path == home_url %}active{% endif %}"><a href="{{ home_url }}">Home Page</a></li>
