@@ -1,0 +1,52 @@
+{% extends "dam_inventory/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+  <h1>Bienvenido!</h1>
+  <p>The following bullets contain some cool facts about me</p>
+  <div align="center">
+  <h1> <img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/14690993_10206768531682241_1714546585939991464_n.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_ohc=XtPptp9CTcAAX9aIWSW&_nc_ht=scontent-lax3-1.xx&oh=33d1aac0d97a5eddc320268538bff39b&oe=5E8238E5"  border="3"> </br> One of my good friends is Cosmo</h1>
+</div>
+  <h2><img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/70946872_10218702425967255_2471740793946112_n.jpg?_nc_cat=100&_nc_sid=dd7718&_nc_ohc=0_2zjTdOpmoAX_ojYvR&_nc_ht=scontent-lax3-1.xx&oh=0dcf487b03b7c71e9dd676b35a3c7431&oe=5E966B83"  border="3"> </br> I have survived/enjoyed Engineering thanks to good friends.</h2>
+  <h3><img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/65128152_10213278806995055_982128951805607936_o.jpg?_nc_cat=101&_nc_sid=110474&_nc_ohc=VhVWrJ3qKdwAX-5z6Z4&_nc_ht=scontent-lax3-1.xx&oh=66e7619b9eb83cd55b19b8d7a3967d75&oe=5E98CF19"  border="3"> </br> I have been married for almost 3 years!</h3>
+  <h4><img src="https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-9/65663174_10214705134524562_7161408209989664768_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_ohc=Rq9o7-9x1N4AX8Ee_lj&_nc_ht=scontent-lax3-1.xx&oh=cf7d2572d433ca57c41763d2ef465d76&oe=5E844BB9"  border="3"></br>And I am grateful for my Family</h4>
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+  <!-- Example Modal -->
+  <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="help-modal-label">Example Modal</h5>
+        </div>
+        <div class="modal-body">
+          <p>You can add custom buttons to the app header using the <code>header_buttons</code> block. Use anchor/link tags for the button and wrap it in a div with the class <code>header-button</code>. For buttons with the gliphyicons, add the <code>glyphicon-button</code> class as well.</p>
+          <p>Ever have trouble using a modal in a Tethys app? Use the <code>after_app_content</code> block for modal content to allow them to function properly. See: <a href="https://getbootstrap.com/javascript/#modals">Bootstrap Modals</a></p>
+          <p>Add tooltips to any element by adding the <code>data-toggle</code>, <code>data-placement</code>, and <code>title</code> attributes to the button. See: <a href="https://getbootstrap.com/javascript/#tooltips">Bootstrap Tooltips</a></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block app_actions %}
+  {% gizmo save_button %}
+  {% gizmo edit_button %}
+  {% gizmo remove_button %}
+  {% gizmo previous_button %}
+  {% gizmo next_button %}
+{% endblock %}
