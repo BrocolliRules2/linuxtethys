@@ -118,8 +118,19 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(mymap);
   </script>
 <body></body>
+
+  <h1>Add Dam</h1>
+  <form id="add-dam-form" method="post">
+    {% csrf_token %}
+    {% gizmo name_input %}
+    {% gizmo owner_input %}
+    {% gizmo river_input %}
+    {% gizmo date_built_input %}
+  </form>
 {% endblock %}
 
+{% gizmo cancel_button %}
+  {% gizmo add_button %}
 
 {% block app_actions %}
 
